@@ -17,5 +17,7 @@ namespace QuoteQuizAPI.Services.Interfaces
         public QuoteModel getQuoteByQuoteId(int QuoteId);
         public QuizModel getQuizModel(UserModel user);
         public List<ModeModel> getModeModels(int currentModeId);
+        public int SaveQuote(int creatorId, string Quote, string QuoteAnsw, bool isCorrect,
+                                      bool isMultChoice, string secChoice, string thirdChoice);
     }
 }

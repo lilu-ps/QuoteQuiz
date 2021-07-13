@@ -31,6 +31,7 @@ namespace QuoteQuizAPI.Controllers
         public IActionResult AddQuote(int creatorId, string Quote, string QuoteAnsw, bool isCorrect,
                                       bool isMultChoice, string secChoice, string thirdChoice)
         {
+            var res = quoteService.SaveQuote(creatorId, Quote, QuoteAnsw, isCorrect, isMultChoice, secChoice, thirdChoice);
             return RedirectToAction("ManageQuotes", "Quote", creatorId);
         }
 

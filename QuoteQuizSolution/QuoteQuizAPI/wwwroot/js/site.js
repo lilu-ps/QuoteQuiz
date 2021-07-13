@@ -138,6 +138,32 @@ function deleteFromAdmin(admId, userId) {
     });
 }
 
+function someFunction(creatorId) {
+    var quote = document.getElementById("n-quote").val;
+    var quoteAns = document.getElementById("a-quote").val;
+    var isCorrect = document.getElementById("isCorrect").checked;
+    var isMultChoice = document.getElementById("wantMultiple").checked;
+    var secChoice = document.getElementById("choice1").val;
+    var thirdChoice = document.getElementById("choice2").val;
+
+    $.ajax({
+        type: 'GET',
+        url: '/Quote/AddQuote',
+        data: {
+            creatorId: creatorId, Quote: quote, QuoteAnsw: quoteAns,
+            isCorrect: isCorrect, isMultChoice: isMultChoice,
+            secChoice: secChoice, thirdChoice: thirdChoice
+        },
+        success: function (a) {
+            $('#quote-add-res').html("Quote Added");
+            $('#quiz-view').html(a);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert(errorThrown)
+        }
+    });
+}
+
 function disableFromAdmin(admId, userId){
     $.ajax({
         type: 'GET',

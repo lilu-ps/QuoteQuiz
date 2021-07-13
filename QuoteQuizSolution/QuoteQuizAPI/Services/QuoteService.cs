@@ -59,6 +59,55 @@ namespace QuoteQuizAPI.Services
             var quote = context.Quotes.SingleOrDefault(e => e.Id == QuoteId);
             return convertcastQuoteToQuoteModel(quote);
         }
+        public int SaveQuote(int creatorId, string Quote, string QuoteAnsw, bool isCorrect,
+                                      bool isMultChoice, string secChoice, string thirdChoice)
+        {
+            var type = isMultChoice ? Constants.ModeConstants.MultipleChoice : Constants.ModeConstants.Binary;
+            var typeModel = context.QuoteTypes.SingleOrDefault(e => e.QuoteTypeName == type);
+            var quote = new Quote()
+            {
+                QuoteTypeId = typeModel == null ? 0 : typeModel.Id,
+                QuoteText = Quote,
+                QuoteType = typeModel
+            };
+            context.Quotes.Add(quote);
+            context.SaveChanges();
+
+
+            var answer = new Answer()
+            {
+                AnswerText = QuoteAnsw,
+                QuoteId = quote.Id,
+                Quote = quote,
+                IsCorrect = isCorrect
+            };
+            context.Answers.Add(answer);
+            context.SaveChanges();
+
+            if (isMultChoice)
+            {
+                var answer2 = new Answer()
+                {
+                    AnswerText = secChoice,
+                    QuoteId = quote.Id,
+                    Quote = quote,
+                    IsCorrect = false
+                };
+                var answer3 = new Answer()
+                {
+                    AnswerText = thirdChoice,
+                    QuoteId = quote.Id,
+                    Quote = quote,
+                    IsCorrect = false
+                };
+                context.Answers.Add(answer2);
+                context.Answers.Add(answer3);
+
+            }
+            return context.SaveChanges();
+        }
+
+
 
         public QuizModel getQuizModel(UserModel user)
         {
