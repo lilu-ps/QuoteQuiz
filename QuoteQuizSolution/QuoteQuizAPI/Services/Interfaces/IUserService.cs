@@ -20,5 +20,6 @@ namespace QuoteQuizAPI.Services.Interfaces
         public int getCurrentQuoteModeByUserId(int userId);
         public List<UserModel> GetOtherUsers(int userId);
         public List<UserGameModel> GetUserGameHistory(int userId, string userName);
+        public UserTypeModel GetUserTypeMode(int typeId);
     }
 }

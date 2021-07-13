@@ -28,7 +28,11 @@ namespace QuoteQuizAPI.Controllers
             return RedirectToAction("Index", "Quote", user);
         }
 
-
+        public IActionResult AddQuote(int creatorId, string Quote, string QuoteAnsw, bool isCorrect,
+                                      bool isMultChoice, string secChoice, string thirdChoice)
+        {
+            return RedirectToAction("ManageQuotes", "Quote", creatorId);
+        }
 
 
 
@@ -39,8 +43,18 @@ namespace QuoteQuizAPI.Controllers
 
         }
 
+        public IActionResult ManageQuotes(int currentUserId)
+        {
+            var quoteAddModel = new QuoteAddModel()
+            {
+                CreatorId = currentUserId
+            };
+            return PartialView("~/Views/QuoteTab.cshtml", quoteAddModel);
+        }
+
         public IActionResult LoggedInPage(UserModel user)
         {
+            user.UserType = userService.GetUserTypeMode(user.UserTypeId);
             var qm = quoteService.getQuizModel(user);
             return View("~/Views/Home/Index.cshtml", qm);
         }

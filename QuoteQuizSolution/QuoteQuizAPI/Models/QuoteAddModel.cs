@@ -7,6 +7,7 @@ namespace QuoteQuizAPI.Models
 {
     public class QuoteAddModel
     {
+        public int CreatorId { get; set; }
         public string QuoteText { get; set; }
         public string QuoteAnswer { get; set; }
         public bool IsCorrect { get; set; }

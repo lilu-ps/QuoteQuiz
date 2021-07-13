@@ -32,6 +32,12 @@
                         <li class="nav-item">
                             <a href='#' class="nav-link text-dark" onclick="reviewMyHistory(@Model.User.Id)">Review My History</a>
                         </li>
+                        @if (Model.User.UserType.UserTypeDesc == QuoteQuizAPI.Constants.UserConstants.Admin)
+                        {
+                            <li class="nav-item">
+                                <a href='#' class="nav-link text-dark" onclick="addQuote(@Model.User.Id)">Manage Quotes</a>
+                            </li>
+                        }
 
                     </ul>
                 </div>

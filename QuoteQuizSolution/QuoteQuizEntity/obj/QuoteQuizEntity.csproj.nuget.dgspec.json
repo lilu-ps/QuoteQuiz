@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj",
         "projectName": "QuoteQuizEntity",
-        "projectPath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5854,11 +5854,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
       "projectName": "QuoteQuizAPI",
-      "projectPath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizAPI\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5875,8 +5875,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj"
+            "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizEntity\\QuoteQuizEntity.csproj"
             }
           }
         }

@@ -137,7 +137,7 @@ namespace QuoteQuizAPI.Services
 
         public List<UserModel> GetOtherUsers(int userId)
         {
-            var users = context.Users.Where(e => e.Id != userId).Select(user => new UserModel()
+            var users = context.Users.Where(e => e.Id != userId && e.IsActive).Select(user => new UserModel()
             {
                 Id = user.Id,
                 FirstName = user.FirstName,
@@ -213,6 +213,19 @@ namespace QuoteQuizAPI.Services
             user.CurrentQuoteMode = context.QuoteTypes.SingleOrDefault(e => e.Id == user.CurrentQuoteModeId);
             return castUserToUserModel(user);
         }
+
+        public UserTypeModel GetUserTypeMode(int typeId)
+        {
+            if (typeId == 0)
+                return null;
+            var type = context.UserTypes.SingleOrDefault(e => e.Id == typeId);
+            return new UserTypeModel
+            {
+                Id = type.Id,
+                UserTypeDesc = type.UserTypeDesc
+            };
+        }
+
 
         private UserModel castUserToUserModel(User user)
         {

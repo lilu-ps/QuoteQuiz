@@ -9,26 +9,42 @@
 <body>
     <div class="boxer">
         <div class="quote-box">
-            <input asp-for="QuoteText" class="new-quote">Quote
-            <input asp-for="QuoteAnswer" class="answer-quote">Answer
-            <input class="choice" id="choice1" disabled>Choice 1
-            <input class="choice" id="choice2" disabled>Choice 2
-            <div id="correctBox">
-                <input asp-for="IsCorrect" type="checkbox" checked id="isCorrect" onclick="myFunction()">
+            <label for="new-quote">Quote</label>
+            <input id="n-quote" class="new-quote"><br>
 
-                <label for="correct"> Is Correct</label><br>
+            <label for="answer-quote">Answer</label>
+            <input id="a-quote" class="answer-quote"><br>
+
+            <label for="choice1">Choice 1</label>
+            <input class="choice" id="choice1" disabled><br>
+
+            <label for="2">Choice 2</label>
+            <input class="choice" id="choice2" disabled><br>
+
+            <div id="correctBox">
+                <label for="correct"> Is Correct</label>
+
+                <input type="checkbox" checked id="isCorrect" onclick="myFunction()"><br>
+
             </div>
             <div id="multipleBox">
-                <input asp-for="IsMultipleChoice" type="checkbox" id="wantMultiple" onclick="wantMultiple()">
-                <label for="multiple"> Want Multiple Choice</label><br>
+                <label for="multiple"> Want Multiple Choice</label>
+
+                <input type="checkbox" id="wantMultiple" onclick="wantMultiple()"><br>
             </div>
-            <input type="submit" value="Add Quote">
+            <button class="btn btn-primary">Add Quote</button>
+
+
+        </div>
+
+        <div id="quote-add-res">
 
         </div>
     </div>
 
-    
 
-<script src="~/scripts/site.js" asp-append-version="true"></script>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>

@@ -41,7 +41,7 @@ namespace QuoteQuizAPI.Controllers
         public IActionResult DisableUserFromAdmin(int admId, int userId)
         {
             var res = userService.DisableUser(userId);
-            return RedirectToAction("ReviewOthers", "User", admId);
+            return RedirectToAction("ReviewOthers", "User", new { userId = admId });
         }
 
         public IActionResult DeleteUserFromAdmin(int admId, int userId)

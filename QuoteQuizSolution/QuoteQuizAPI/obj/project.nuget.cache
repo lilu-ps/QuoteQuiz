@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8HzRhwwifB1peumPJCOXpaPq1tEGSRS4RA7iHR6pgktZMvCMIOKsG1RiqiFZhG8ZjxHHT1zPdbxs7Wb7C8Z1PQ==",
+  "dgSpecHash": "LvVaYCSHHknwcjIBs4mUg1Wd3ZzJ6IjVvbb0AyHUplthkJjLXA4p6JHNINVlQBC81/ic/iuzBof121z3bu8KlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\QuoteQuiz\\QuoteQuizSolution\\QuoteQuizAPI\\QuoteQuizAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
