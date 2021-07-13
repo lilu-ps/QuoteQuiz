@@ -1,0 +1,22 @@
+﻿@model QuizModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ var isBinary = Model != null && Model.Quote.QuoteType.QuoteTypeName == QuoteQuizAPI.Constants.ModeConstants.Binary;
+                var binaryAgreedCorrectly = isBinary && Model.ChosenAnswer.ChosenAnswer.IsCorrect && Model.ChosenAnswer.Agreed;
+                var binaryDisagreedCorrectly = isBinary && !Model.ChosenAnswer.ChosenAnswer.IsCorrect && !Model.ChosenAnswer.Agreed;
+                var binaryChoiceIsCorrect = binaryAgreedCorrectly || binaryDisagreedCorrectly;
+
+                var isCorrect = Model != null && (binaryChoiceIsCorrect || (!isBinary && Model.ChosenAnswer.ChosenAnswer.IsCorrect)); }
+
+@if (isCorrect)
+{
+<h1 class="display-4">Correct!</h1> }
+else
+{
+<h1 class="display-4">Sorry, you are wrong!</h1>}
+<h2>The right answer is @Model.CorrectAnswer.AnswerText</h2>
+
+<button class="next" id="next-quote" onclick="getNextQuote(@Model.User.Id)">Next</button>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>  

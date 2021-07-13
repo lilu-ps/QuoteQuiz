@@ -1,0 +1,29 @@
+﻿@model QuizModel
+
+@{ ViewData["Title"] = "Quiz Page"; }
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<div class="boxer">
+
+    <div class="text-center">
+        <h1 >Who Said It?</h1>
+        <div id="quote-div">
+            <p>"@Model.Quote.QuoteText"</p>
+        </div>
+
+        @if (@Model.Quote.QuoteType.QuoteTypeName == QuoteQuizAPI.Constants.ModeConstants.Binary)
+        {
+@Html.Partial("~/Views/BinaryAnswer.cshtml", Model) }
+else
+{
+@Html.Partial("~/Views/MultipleChoice.cshtml", Model)}
+
+        <div id="QuizResultDiv"></div>
+    </div>
+
+</div>

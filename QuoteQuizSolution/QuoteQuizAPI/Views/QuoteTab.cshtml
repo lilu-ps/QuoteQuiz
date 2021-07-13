@@ -1,0 +1,34 @@
+﻿@model QuoteAddModel
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QuoteQuizAPI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="boxer">
+        <div class="quote-box">
+            <input asp-for="QuoteText" class="new-quote">Quote
+            <input asp-for="QuoteAnswer" class="answer-quote">Answer
+            <input class="choice" id="choice1" disabled>Choice 1
+            <input class="choice" id="choice2" disabled>Choice 2
+            <div id="correctBox">
+                <input asp-for="IsCorrect" type="checkbox" checked id="isCorrect" onclick="myFunction()">
+
+                <label for="correct"> Is Correct</label><br>
+            </div>
+            <div id="multipleBox">
+                <input asp-for="IsMultipleChoice" type="checkbox" id="wantMultiple" onclick="wantMultiple()">
+                <label for="multiple"> Want Multiple Choice</label><br>
+            </div>
+            <input type="submit" value="Add Quote">
+
+        </div>
+    </div>
+
+    
+
+<script src="~/scripts/site.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+</body>

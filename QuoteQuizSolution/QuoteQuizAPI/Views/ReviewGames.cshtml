@@ -1,0 +1,49 @@
+﻿@model QuizModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QuoteQuizAPI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="boxer">
+        <table class="table" id="statement-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.OtherUsers)
+                {
+
+                    <tr>
+                        <td>
+                            @user.Username
+                        </td>
+
+                        <td>
+                            <a asp-controller="User" asp-action="getUserGames" asp-route-viewerId="@Model.User.Id" asp-route-id="@user.Id" asp-route-username="@user.Username">View User Games</a>
+                        </td>
+                        @if (Model.User.UserType.UserTypeDesc == QuoteQuizAPI.Constants.UserConstants.Admin)
+                        {
+                            <td>
+                                <a asp-controller="User" asp-action="DisableUserFromAdmin" asp-route-admId="@Model.User.Id" asp-route-userId="@user.Id">Disable User</a>
+                            </td>
+                            <td>
+                                <a asp-controller="User" asp-action="DeleteUserFromAdmin" asp-route-admId="@Model.User.Id" asp-route-userId="@user.Id">Delete User</a>
+
+                            </td>
+                        }
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>

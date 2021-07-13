@@ -1,0 +1,35 @@
+﻿@model QuizModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <title>Statement</title>
+</head>
+<body>
+    <div class="boxer">
+        <h1>Quiz Modes:</h1>
+
+        <input id="hdnUserId" name="userId" type="hidden" value="@Model.Settings.UserId">
+        <div id="SettingSwitcherGroup">
+            @foreach (var item in Model.Settings.settings)
+            {
+                var isChecked = item.IsCurrentMode ? "checked" : "";
+                <input type="radio" name="SettingSwitcher" value="@item.type.Id" @isChecked> @item.type.QuoteTypeName
+                <br>
+            }
+        </div>
+
+        <div id="ModeChangeRes">
+
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

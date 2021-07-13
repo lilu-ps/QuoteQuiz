@@ -1,0 +1,11 @@
+﻿@model QuizModel
+
+@{ ViewData["Title"] = "Quote Quiz"; }
+
+<div id="tab-bar">
+    @Html.Partial("~/Views/Shared/_Layout.cshtml", Model)
+</div>
+
+<div id="quiz-view">
+    @Html.Partial("~/Views/Quiz.cshtml", Model)
+</div>

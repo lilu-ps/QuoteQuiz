@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\bin\Debug\netcoreapp3.1\QuoteQuizEntity.deps.json
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\bin\Debug\netcoreapp3.1\QuoteQuizEntity.runtimeconfig.json
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\bin\Debug\netcoreapp3.1\QuoteQuizEntity.runtimeconfig.dev.json
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\bin\Debug\netcoreapp3.1\QuoteQuizEntity.dll
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\bin\Debug\netcoreapp3.1\QuoteQuizEntity.pdb
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.AssemblyInfo.cs
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.dll
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.pdb
+C:\Users\User\source\repos\QuoteQuizSolution\QuoteQuizEntity\obj\Debug\netcoreapp3.1\QuoteQuizEntity.genruntimeconfig.cache

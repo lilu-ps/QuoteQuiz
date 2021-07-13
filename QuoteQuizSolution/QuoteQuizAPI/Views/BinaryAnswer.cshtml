@@ -1,0 +1,7 @@
+﻿@model QuizModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1 class="answer-binary" >@Model.Answers.FirstOrDefault().AnswerText</h1>
+
+<a class="yes" href='#' onclick="binaryAnswer(@Model.User.Id,@Model.Quote.Id,  @Model.Answers.FirstOrDefault().Id, true)">Yes</a>
+<a class="no" href='#' onclick="binaryAnswer(@Model.User.Id,@Model.Quote.Id,  @Model.Answers.FirstOrDefault().Id, false)">No</a>
